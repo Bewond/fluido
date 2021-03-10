@@ -77,12 +77,15 @@ class ChatMessage extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: Align(
         alignment: alignment,
-        child: Align(
-          alignment: alignment,
-          child: Container(
-            padding: EdgeInsets.all(10),
-            color: color,
-            child: child,
+        child: FractionallySizedBox(
+          widthFactor: 0.8,
+          child: Align(
+            alignment: alignment,
+            child: Container(
+              padding: EdgeInsets.all(10),
+              color: color,
+              child: child,
+            ),
           ),
         ),
       ),
