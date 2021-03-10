@@ -10,12 +10,35 @@ class LayoutWidth extends StatelessWidget {
 
   final FluidoBreakpoints breakpoints;
 
-  const LayoutWidth({this.sm, this.md, this.lg, this.xl, this.xl2, this.breakpoints});
+  const LayoutWidth({
+    this.sm,
+    this.md,
+    this.lg,
+    this.xl,
+    this.xl2,
+    this.breakpoints,
+  });
 
   @override
   Widget build(BuildContext context) {
-    var _breakpoints = breakpoints ?? FluidoSettings.breakpoints;
+    var settings = breakpoints ?? FluidoSettings.breakpoints;
 
-    return Container();
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        var width = constraints.maxWidth;
+
+        if (width < settings.sm) {
+          return sm;
+        } else if (width < settings.md) {
+          return md ?? sm;
+        } else if (width < settings.lg) {
+          return lg ?? md ?? sm;
+        } else if (width < settings.xl) {
+          return xl ?? lg ?? md ?? sm;
+        } else {
+          return xl2 ?? xl ?? lg ?? md ?? sm;
+        }
+      },
+    );
   }
 }
