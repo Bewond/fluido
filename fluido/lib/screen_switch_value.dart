@@ -24,18 +24,17 @@ class ScreenSwitchValue<Type> {
   Type get value {
     var settings = breakpoints ?? FluidoSettings.breakpoints;
     var width = MediaQuery.of(context).size.width;
-    var other = Container();
 
     if (width < settings.sm) {
-      return sm ?? other;
+      return sm;
     } else if (width < settings.md) {
-      return md ?? sm ?? other;
+      return md ?? sm;
     } else if (width < settings.lg) {
-      return lg ?? md ?? sm ?? other;
+      return lg ?? md ?? sm;
     } else if (width < settings.xl) {
-      return xl ?? lg ?? md ?? sm ?? other;
+      return xl ?? lg ?? md ?? sm;
     } else {
-      return xl2 ?? xl ?? lg ?? md ?? sm ?? other;
+      return xl2 ?? xl ?? lg ?? md ?? sm;
     }
   }
 }

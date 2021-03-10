@@ -29,53 +29,53 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Fluido example'),
       ),
-      body: Column(
-        children: [
-          LayoutWidth(
-            sm: Container(
-              color: Colors.red,
-              child: Text('sm'),
-            ),
-            md: Container(
-              color: Colors.green,
-              child: Text('md'),
-            ),
-            lg: Container(
-              color: Colors.blue,
-              child: Text('lg'),
-            ),
-            xl: Container(
-              color: Colors.yellow,
-              child: Text('xl'),
-            ),
-            xl2: Container(
-              color: Colors.brown,
-              child: Text('xl2'),
-            ),
-          ),
-          ScreenOrientation(
-            portrait: Container(
-              color: Colors.white10,
-              child: Text('portrait'),
-            ),
-            landscape: Container(
-              color: Colors.white24,
-              child: Text('landscape'),
-            ),
-          ),
-          Spacer(),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(
-                ScreenSwitchValue(
-                  context: context,
-                  sm: 0.0,
-                  xl: 100,
-                ).value,
+      body: Padding(
+        padding: EdgeInsets.all(
+          ScreenSwitchValue(
+            context,
+            sm: 0.0,
+            xl: 100,
+          ).value,
+        ),
+        child: Column(
+          children: [
+            LayoutWidth(
+              sm: Container(
+                color: Colors.red,
+                child: Text('sm'),
               ),
+              md: Container(
+                color: Colors.green,
+                child: Text('md'),
+              ),
+              lg: Container(
+                color: Colors.blue,
+                child: Text('lg'),
+              ),
+              xl: Container(
+                color: Colors.yellow,
+                child: Text('xl'),
+              ),
+              xl2: Container(
+                color: Colors.brown,
+                child: Text('xl2'),
+              ),
+            ),
+            ScreenOrientation(
+              portrait: Container(
+                color: Colors.white10,
+                child: Text('portrait'),
+              ),
+              landscape: Container(
+                color: Colors.white24,
+                child: Text('landscape'),
+              ),
+            ),
+            Spacer(),
+            Expanded(
               child: Flex(
                 direction: ScreenSwitchValue(
-                  context: context,
+                  context,
                   sm: Axis.vertical,
                   lg: Axis.horizontal,
                 ).value,
@@ -105,8 +105,8 @@ class MyHomePage extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
