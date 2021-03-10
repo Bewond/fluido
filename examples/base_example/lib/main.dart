@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:fluido/fluido.dart';
 
 void main() {
+  FluidoSettings.breakpoints = FluidoBreakpoints(
+    sm: 768,
+    md: 1024,
+    lg: 1280,
+    xl: 1536,
+  );
+
   runApp(MyApp());
 }
 
@@ -21,72 +29,26 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Fluido example'),
       ),
-      body: Column(
-        children: [
-          ChatMessage(
-            alignment: Alignment.centerRight,
-            color: Colors.red,
-            child: Text("Lorem ipsum dolor sit amet"),
-          ),
-          ChatMessage(
-            alignment: Alignment.centerLeft,
-            color: Colors.blue,
-            child: Column(
-              children: [
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
-                Text("10:00"),
-              ],
-            ),
-          ),
-          ChatMessage(
-            alignment: Alignment.center,
-            color: Colors.grey,
-            child: Text("Nuovi messaggi"),
-          ),
-          ChatMessage(
-            alignment: Alignment.centerRight,
-            color: Colors.red,
-            child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"),
-          ),
-          ChatMessage(
-            alignment: Alignment.centerLeft,
-            color: Colors.blue,
-            child: Column(
-              children: [
-                Text("Lorem ipsum dolor sit amet"),
-                Text("10:00"),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ChatMessage extends StatelessWidget {
-  final Alignment alignment;
-  final Color color;
-  final Widget child;
-
-  const ChatMessage({this.alignment, this.color, this.child});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
-      child: Align(
-        alignment: alignment,
-        child: FractionallySizedBox(
-          widthFactor: 0.8,
-          child: Align(
-            alignment: alignment,
-            child: Container(
-              padding: EdgeInsets.all(10),
-              color: color,
-              child: child,
-            ),
-          ),
+      body: LayoutWidth(
+        sm: Container(
+          color: Colors.red,
+          child: Text('sm'),
+        ),
+        md: Container(
+          color: Colors.green,
+          child: Text('md'),
+        ),
+        lg: Container(
+          color: Colors.blue,
+          child: Text('lg'),
+        ),
+        xl: Container(
+          color: Colors.yellow,
+          child: Text('xl'),
+        ),
+        xl2: Container(
+          color: Colors.brown,
+          child: Text('xl2'),
         ),
       ),
     );
