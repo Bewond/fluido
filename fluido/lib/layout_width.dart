@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluido/fluido_settings.dart';
-import 'package:fluido/layout_switch_widget.dart';
+import 'package:fluido/fluido.dart';
 
 class LayoutWidth extends StatelessWidget {
   final FluidoBreakpoints breakpoints;
