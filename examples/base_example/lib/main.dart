@@ -68,9 +68,7 @@ class MyHomePage extends StatelessWidget {
                   child: Text('landscape'),
                 ),
               ),
-              ScreenWidth(
-                xl: Spacer(),
-              ),
+              ScreenWidth(xl: Spacer()),
               Expanded(
                 child: Flex(
                   direction: ScreenSwitchValue(
