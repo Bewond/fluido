@@ -1,7 +1,10 @@
 library fluido;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'package:fluido/fluido_settings.dart';
+export 'package:fluido/screen_switch_value.dart';
+export 'package:fluido/layout_switch_widget.dart';
+
+export 'package:fluido/screen_width.dart';
+export 'package:fluido/layout_width.dart';
+export 'package:fluido/screen_orientation.dart';
+export 'package:fluido/layout_orientation.dart';
