@@ -4,6 +4,7 @@ import 'package:fluido/fluido_settings.dart';
 class LayoutSwitchWidget {
   final BuildContext context;
   final FluidoBreakpoints breakpoints;
+  final Widget other;
 
   final Widget sm;
   final Widget md;
@@ -14,6 +15,7 @@ class LayoutSwitchWidget {
   const LayoutSwitchWidget(
     this.context, {
     this.breakpoints,
+    this.other,
     this.sm,
     this.md,
     this.lg,
@@ -23,7 +25,6 @@ class LayoutSwitchWidget {
 
   Widget get widget {
     var settings = breakpoints ?? FluidoSettings.breakpoints;
-    var other = Container();
 
     return LayoutBuilder(
       builder: (context, constraints) {

@@ -4,6 +4,7 @@ import 'package:fluido/fluido_settings.dart';
 class ScreenSwitchValue<Type> {
   final BuildContext context;
   final FluidoBreakpoints breakpoints;
+  final Type other;
 
   final Type sm;
   final Type md;
@@ -14,6 +15,7 @@ class ScreenSwitchValue<Type> {
   const ScreenSwitchValue(
     this.context, {
     this.breakpoints,
+    this.other,
     this.sm,
     this.md,
     this.lg,
@@ -26,15 +28,15 @@ class ScreenSwitchValue<Type> {
     var width = MediaQuery.of(context).size.width;
 
     if (width < settings.sm) {
-      return sm;
+      return sm ?? other;
     } else if (width < settings.md) {
-      return md ?? sm;
+      return md ?? sm ?? other;
     } else if (width < settings.lg) {
-      return lg ?? md ?? sm;
+      return lg ?? md ?? sm ?? other;
     } else if (width < settings.xl) {
-      return xl ?? lg ?? md ?? sm;
+      return xl ?? lg ?? md ?? sm ?? other;
     } else {
-      return xl2 ?? xl ?? lg ?? md ?? sm;
+      return xl2 ?? xl ?? lg ?? md ?? sm ?? other;
     }
   }
 }

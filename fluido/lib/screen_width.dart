@@ -24,6 +24,7 @@ class ScreenWidth extends StatelessWidget {
     return ScreenSwitchValue<Widget>(
       context,
       breakpoints: breakpoints,
+      other: Container(),
       sm: sm,
       md: md,
       lg: lg,

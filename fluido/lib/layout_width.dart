@@ -24,6 +24,7 @@ class LayoutWidth extends StatelessWidget {
     return LayoutSwitchWidget(
       context,
       breakpoints: breakpoints,
+      other: Container(),
       sm: sm,
       md: md,
       lg: lg,
