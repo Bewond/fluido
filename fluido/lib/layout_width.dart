@@ -1,5 +1,5 @@
-import 'package:fluido/fluido_settings.dart';
 import 'package:flutter/material.dart';
+import 'package:fluido/fluido_settings.dart';
 
 class LayoutWidth extends StatelessWidget {
   final Widget sm;
