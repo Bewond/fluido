@@ -11,8 +11,8 @@ class LayoutSwitchWidget {
   final Widget xl;
   final Widget xl2;
 
-  const LayoutSwitchWidget({
-    @required this.context,
+  const LayoutSwitchWidget(
+    this.context, {
     this.breakpoints,
     this.sm,
     this.md,

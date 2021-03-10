@@ -22,7 +22,7 @@ class LayoutWidth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutSwitchWidget(
-      context: context,
+      context,
       breakpoints: breakpoints,
       sm: sm,
       md: md,

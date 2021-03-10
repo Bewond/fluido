@@ -22,7 +22,7 @@ class ScreenWidth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenSwitchValue<Widget>(
-      context: context,
+      context,
       breakpoints: breakpoints,
       sm: sm,
       md: md,

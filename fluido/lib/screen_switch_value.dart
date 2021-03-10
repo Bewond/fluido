@@ -11,8 +11,8 @@ class ScreenSwitchValue<Type> {
   final Type xl;
   final Type xl2;
 
-  const ScreenSwitchValue({
-    @required this.context,
+  const ScreenSwitchValue(
+    this.context, {
     this.breakpoints,
     this.sm,
     this.md,
