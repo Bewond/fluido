@@ -57,6 +57,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
+  fluido:
+    dependency: "direct main"
+    description:
+      path: fluido
+      ref: HEAD
+      resolved-ref: d20cf82dcea3898f02d7376bd2eccb377ec501cb
+      url: "git://github.com/bewond/fluido.git"
+    source: git
+    version: "0.0.2"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -88,6 +97,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
+  pedantic:
+    dependency: transitive
+    description:
+      name: pedantic
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.11.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -151,3 +167,4 @@ packages:
     version: "2.1.0"
 sdks:
   dart: ">=2.12.0-0.0 <3.0.0"
+  flutter: ">=1.17.0"

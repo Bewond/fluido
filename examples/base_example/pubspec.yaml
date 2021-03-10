@@ -1,6 +1,7 @@
 name: base_example
 description: A new Flutter application.
 
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
@@ -10,6 +11,11 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  #
+  fluido:
+    git:
+      url: git://github.com/bewond/fluido.git
+      path: fluido
 
 dev_dependencies:
   flutter_test:
