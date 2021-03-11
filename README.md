@@ -85,23 +85,18 @@ Flex(
 ```dart
 ScreenWidth(
   sm: Container(
-    color: Colors.red,
     child: Text('sm'),
   ),
   md: Container(
-    color: Colors.green,
     child: Text('md'),
   ),
   lg: Container(
-    color: Colors.blue,
     child: Text('lg'),
   ),
   xl: Container(
-    color: Colors.yellow,
     child: Text('xl'),
   ),
   xl2: Container(
-    color: Colors.brown,
     child: Text('xl2'),
   ),
 );
@@ -115,7 +110,18 @@ ScreenWidth(xl: Spacer())
 
 In this example the Spacer widget will only be displayed for sizes extra large and up.
 
-### Fluido settings
+### ScreenOrientation and ScreenOrientation
+`ScreenOrientation` select the specified widget according to the screen orientation.
+`ScreenOrientation` is the same but based on the orientation of the parent widget.
+
+```dart
+ScreenOrientation(
+  portrait: Container(child: Text('portrait')),
+  landscape: Container(child: Text('landscape')),
+);
+```
+
+### FluidoSettings
 The following breakpoints are currently available:
 - sm = 640
 - md = 768
@@ -124,6 +130,7 @@ The following breakpoints are currently available:
 - xl2 = 1536
 
 To globally change the value of the breakpoints, use the `FluidoSettings` object:
+
 ```dart
 void main() {
   FluidoSettings.breakpoints = FluidoBreakpoints(
