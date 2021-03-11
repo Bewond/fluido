@@ -29,7 +29,7 @@ class ScreenSwitchValue<Type> {
     this.xl2,
   }) : assert(context != null);
 
-  /// The value selected, depending on the screen or window size.
+  /// The [Type] value selected, depending on the screen or window size.
   Type get value {
     var settings = breakpoints ?? FluidoSettings.breakpoints;
     var width = MediaQuery.of(context).size.width;

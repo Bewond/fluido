@@ -5,7 +5,7 @@ import 'package:fluido/fluido.dart';
 /// It updates automatically as dimensions change.
 ///
 /// Specify the [breakpoints] parameter to use custom local breakpoints.
-/// The [other] [Widget] is used in case there is no lower non-null value for a breakpoint.
+/// The [other] widget is used in case there is no lower non-null value for a breakpoint.
 class LayoutSwitchWidget {
   final BuildContext context;
   final FluidoBreakpoints breakpoints;
