@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fluido/fluido.dart';
 
+/// Selects the specified [Widget] based on the size of the parent widget,
+/// it updates automatically as dimensions change.
+///
+/// Specify the [breakpoints] parameter to use custom local breakpoints.
+/// The [other] [Widget] is used in case there is no lower non-null value for a breakpoint.
 class LayoutSwitchWidget {
   final BuildContext context;
   final FluidoBreakpoints breakpoints;
@@ -23,6 +28,7 @@ class LayoutSwitchWidget {
     this.xl2,
   }) : assert(context != null);
 
+  /// The [Widget] selected, depending on the size of the parent widget.
   Widget get widget {
     var settings = breakpoints ?? FluidoSettings.breakpoints;
 

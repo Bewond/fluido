@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Select the specified widget according to the screen orientation.
 class ScreenOrientation extends StatelessWidget {
   final Widget landscape;
   final Widget portrait;

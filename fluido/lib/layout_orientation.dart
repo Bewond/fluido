@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Select the specified widget according to the parent widget orientation.
 class LayoutOrientation extends StatelessWidget {
   final Widget landscape;
   final Widget portrait;
