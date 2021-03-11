@@ -1,11 +1,11 @@
 /// Contains the settings for the Fluid package.
 ///
-/// Edit the [breakpoints] parameter to set custom global values for breakpoints.
+/// Edit the [breakpoints] parameter to set custom global breakpoints.
 class FluidoSettings {
   static FluidoBreakpoints breakpoints = FluidoBreakpoints();
 }
 
-/// Contains the values, in logical pixels, for the breakpoints.
+/// Contains the maximum values, in logical pixels, for the breakpoints.
 ///
 /// If no value is specified for a breakpoint, the default value is used.
 class FluidoBreakpoints {
