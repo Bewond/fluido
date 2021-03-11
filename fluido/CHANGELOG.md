@@ -13,3 +13,7 @@ Added new widgets:
 ## 0.1.1
 
 Documentation improved
+
+## 0.1.2
+
+Update README.md

@@ -1,9 +1,6 @@
 # Fluido
 A simple and lightweight package to efficiently create reactive and responsive user interfaces in [Flutter](https://flutter.dev/).
 
-(Currently in beta)
-
-- [Installing](#installing)
 - [Introduction](#introduction)
   * [Breakpoints and orientation](#breakpoints-and-orientation)
   * [Screen or Layout](#screen-or-layout)
@@ -13,22 +10,6 @@ A simple and lightweight package to efficiently create reactive and responsive u
   * [ScreenOrientation and ScreenOrientation](#screenorientation-and-screenorientation)
   * [FluidoSettings](#fluidosettings)
 - [Maintainers](#maintainers)
-
-## Installing
-#### Depend
-Add this to your package's pubspec.yaml file:
-```yaml
-dependencies:
-  fluido:
-    git:
-      url: git://github.com/bewond/fluido.git
-      path: fluido
-```
-#### Install
-You can install packages from the command line:
-```shell
-flutter pub get
-```
 
 ## Introduction
 
