@@ -36,9 +36,9 @@ while for the dimensions from large upwards the specified `lg` value is selected
 This allows you to **incrementally specify** which value you want to get.
 
 ### Breakpoints and orientation
-Breakpoints are used to select a value depending on the width of the screen or window, for example with the `ScreenWidth` and` LayoutWidth` widgets.
+Breakpoints are used to select a value depending on the width of the screen or window, for example with the `ScreenWidth` and `LayoutWidth` widgets.
 
-To select a value based on orientation, landscape or portrait, use the `ScreenOrientation` and` LayoutOrientation` widgets.
+To select a value based on orientation, landscape or portrait, use the `ScreenOrientation` and `LayoutOrientation` widgets.
 
 ### Screen or Layout width
 There are two versions of the main widgets and classes:
