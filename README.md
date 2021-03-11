@@ -23,16 +23,24 @@ You can install packages from the command line:
 flutter pub get
 ```
 
-## Documentation
-Fluido widgets are based on the use of breakpoints (`sm`, `md`, `lg`, `xl`, `xl2`).
-A value is specified, for example a widget, to be returned for each breakpoints depending on the width.
+## Introduction
 
-If no value is specified for a given breakpoints, the *lower closest non-null value* is used.
+Fluido widgets are based on the use of breakpoints (`sm`, `md`, `lg`, `xl`, `xl2`).
+A value is specified, for example a widget, to be returned for each breakpoints depending on the dimensions.
+
+If no value is specified for a given breakpoints, the **lower closest non-null value** is used.
 
 For example if you specify only `sm` and `lg` for the dimensions sm and md the specified `sm` value is selected
 while for the dimensions from `lg` upwards the specified `lg` value is selected.
 
-This allows you to incrementally specify which value you want to get.
+This allows you to **incrementally specify** which value you want to get.
+
+### Orientation
+Breakpoints are used to select a value depending on the width of the screen or window, for example with the `ScreenWidth` and` LayoutWidth` widgets.
+
+To select a value based on orientation, landscape or portrait, use the `ScreenOrientation` and` LayoutOrientation` widgets.
+
+## Documentation
 
 ### ScreenSwitchValue
 `ScreenSwitchValue` selects the specified value according to the screen or window size,
@@ -48,7 +56,7 @@ Container(
 );
 ```
 
-### Flido settings
+### Fluido settings
 The following breakpoints are currently available:
 - sm = 640
 - md = 768
