@@ -1,3 +1,7 @@
+/// Global class containing the settings for the Fluido package.
+///
+/// Edit the [breakpoints] parameter to set custom global values for breakpoints.
+
 class FluidoSettings {
   static FluidoBreakpoints breakpoints = FluidoBreakpoints();
 }

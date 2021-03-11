@@ -36,7 +36,7 @@ class MyHomePage extends StatelessWidget {
           ),
           child: Column(
             children: [
-              LayoutWidth(
+              ScreenWidth(
                 sm: Container(
                   color: Colors.red,
                   child: Text('sm'),
