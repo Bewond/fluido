@@ -61,6 +61,23 @@ Container(
 );
 ```
 
+Use the `other` parameter to specify a value in case there is no **lower non-null value** for a breakpoint.
+
+This can be very useful when used with Flutter's [Flex](https://api.flutter.dev/flutter/widgets/Flex-class.html) widget to display items in row or column depending on size:
+
+```dart
+Flex(
+  direction: ScreenSwitchValue(
+    context,
+    sm: Axis.vertical,
+    lg: Axis.horizontal,
+  ).value,
+  children: [
+    ...
+  ],
+);
+```
+
 ### ScreenWidth and LayoutWidth
 `ScreenWidth` select the specified widget according to the screen or window size.
 `LayoutWidth` is the same but based on the size of the parent widget.
