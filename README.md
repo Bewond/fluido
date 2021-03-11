@@ -79,7 +79,7 @@ Flex(
 ```
 
 ### ScreenWidth and LayoutWidth
-`ScreenWidth` select the specified widget according to the screen or window size.
+`ScreenWidth` select the specified widget according to the screen or window size (like `ScreenSwitchValue` of type widget).
 `LayoutWidth` is the same but based on the size of the parent widget.
 
 ```dart
@@ -154,7 +154,6 @@ ScreenWidth(
   ),
   sm: ...
   md: ...
-  lg: ...
 );
 ```
 
