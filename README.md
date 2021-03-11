@@ -29,7 +29,7 @@ A value is specified, for example a widget, to be returned for each breakpoints 
 
 If no value is specified for a given breakpoints, the *lower closest non-null value* is used.
 
-For example if you specify only `sm` and` lg` for the dimensions sm and md the specified `sm` value is selected
+For example if you specify only `sm` and `lg` for the dimensions sm and md the specified `sm` value is selected
 while for the dimensions from `lg` upwards the specified `lg` value is selected.
 
 This allows you to incrementally specify which value you want to get.
