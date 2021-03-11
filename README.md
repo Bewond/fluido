@@ -43,7 +43,7 @@ To select a value based on orientation, landscape or portrait, use the `ScreenOr
 ### Screen or Layout
 There are two versions of the main widgets and classes:
 
-Objects named with `Screen *` refer to the size of the screen or window while those with `Layout *` refer to the size of the parent widget and can therefore only be used as a widget.
+Objects named with `Screen*` refer to the size of the screen or window while those with `Layout*` refer to the size of the parent widget and can therefore only be used as a widget.
 
 ## Documentation
 
@@ -62,7 +62,41 @@ Container(
 ```
 
 ### ScreenWidth and LayoutWidth
-Selezionano il widget specificato a seconda della largezza dello schermo (oppure del widget genitore per `LayoutWidth`).
+`ScreenWidth` select the specified widget according to the screen or window size.
+`LayoutWidth` is the same but based on the size of the parent widget.
+
+```dart
+ScreenWidth(
+  sm: Container(
+    color: Colors.red,
+    child: Text('sm'),
+  ),
+  md: Container(
+    color: Colors.green,
+    child: Text('md'),
+  ),
+  lg: Container(
+    color: Colors.blue,
+    child: Text('lg'),
+  ),
+  xl: Container(
+    color: Colors.yellow,
+    child: Text('xl'),
+  ),
+  xl2: Container(
+    color: Colors.brown,
+    child: Text('xl2'),
+  ),
+);
+```
+
+Thanks to the incremental system of breakpoints `ScreenWidth` can also be used to show a widget only for certain dimensions:
+
+```dart
+ScreenWidth(xl: Spacer())
+```
+
+In this example the Spacer widget will only be displayed for sizes extra large and up.
 
 ### Fluido settings
 The following breakpoints are currently available:
