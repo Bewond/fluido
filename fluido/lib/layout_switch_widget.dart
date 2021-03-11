@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluido/fluido.dart';
 
-/// Selects the specified [Widget] based on the size of the parent widget,
-/// it updates automatically as dimensions change.
+/// Selects the specified [Widget] based on the size of the parent widget.
+/// It updates automatically as dimensions change.
 ///
 /// Specify the [breakpoints] parameter to use custom local breakpoints.
 /// The [other] [Widget] is used in case there is no lower non-null value for a breakpoint.

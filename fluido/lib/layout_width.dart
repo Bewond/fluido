@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fluido/fluido.dart';
 
+/// Select the specified [Widget] based on the size of the parent widget.
+///
+/// Specify the [breakpoints] parameter to use custom local breakpoints.
 class LayoutWidth extends StatelessWidget {
   final FluidoBreakpoints breakpoints;
   final Widget sm;

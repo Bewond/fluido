@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fluido/fluido.dart';
 
-/// Selects the specified value according to the screen or window size,
-/// it updates automatically as dimensions change and can be used for values of any type.
+/// Selects the specified value according to the screen or window size.
+/// It updates automatically as dimensions change and can be used for values of any type.
 ///
+/// This can be very useful with [Flex] to display items in row or column.
 /// Specify the [breakpoints] parameter to use custom local breakpoints.
 /// The [other] value is used in case there is no lower non-null value for a breakpoint.
 class ScreenSwitchValue<Type> {
