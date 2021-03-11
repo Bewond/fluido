@@ -40,7 +40,7 @@ Breakpoints are used to select a value depending on the width of the screen or w
 
 To select a value based on orientation, landscape or portrait, use the `ScreenOrientation` and `LayoutOrientation` widgets.
 
-### Screen or Layout width
+### Screen or Layout
 There are two versions of the main widgets and classes:
 
 Objects named with `Screen *` refer to the size of the screen or window while those with `Layout *` refer to the size of the parent widget and can therefore only be used as a widget.
@@ -60,6 +60,9 @@ Container(
   ).value,
 );
 ```
+
+### ScreenWidth and LayoutWidth
+Selezionano il widget specificato a seconda della largezza dello schermo (oppure del widget genitore per `LayoutWidth`).
 
 ### Fluido settings
 The following breakpoints are currently available:
