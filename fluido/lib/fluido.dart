@@ -1,6 +1,6 @@
 /// A simple and lightweight package to efficiently create reactive and responsive user interfaces.
 ///
-/// Fluido widgets are based on the use of breakpoints (sm, md, lg, xl, xl2).
+/// Fluido widgets are based on the use of breakpoints.
 /// If no value is specified for a given breakpoints, the lower closest non-null value is used.
 /// This allows you to incrementally specify which value you want to get.
 ///
