@@ -9,3 +9,7 @@ Added new widgets:
 - ScreenOrientation
 - LayoutWidth
 - LayoutOrientation
+
+## 0.1.0
+
+Documentation improved
