@@ -69,8 +69,6 @@ Container(
 );
 ```
 
-Use the `other` parameter to specify a value in case there is no **lower non-null value** for a breakpoint.
-
 This can be very useful when used with Flutter's [Flex](https://api.flutter.dev/flutter/widgets/Flex-class.html) widget to display items in row or column depending on size:
 
 ```dart
