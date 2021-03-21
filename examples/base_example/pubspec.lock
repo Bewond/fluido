@@ -62,7 +62,7 @@ packages:
     description:
       path: fluido
       ref: HEAD
-      resolved-ref: "82a10843d89fe0e4c3b33fb294f93be683ec1b7b"
+      resolved-ref: "39ecbb4712c3ded3f0b10b718694ded0239f30d6"
       url: "git://github.com/bewond/fluido.git"
     source: git
     version: "0.2.0"
