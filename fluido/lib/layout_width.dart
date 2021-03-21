@@ -25,9 +25,8 @@ class LayoutWidth extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutSwitchWidget(
       context,
-      breakpoints: breakpoints ?? FluidoSettings.breakpoints,
-      other: Container(),
-      sm: sm,
+      breakpoints: breakpoints,
+      sm: sm ?? Container(),
       md: md,
       lg: lg,
       xl: xl,

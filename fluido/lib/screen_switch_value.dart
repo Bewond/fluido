@@ -6,7 +6,6 @@ import 'package:fluido/fluido.dart';
 ///
 /// This can be very useful with [Flex] to display items in row or column.
 /// Specify the [breakpoints] parameter to use custom local breakpoints.
-/// The [other] value is used in case there is no lower non-null value for a breakpoint.
 class ScreenSwitchValue<Type> {
   final BuildContext context;
 
@@ -15,7 +14,6 @@ class ScreenSwitchValue<Type> {
   final Type? lg;
   final Type? xl;
   final Type? xl2;
-
   final FluidoBreakpoints? breakpoints;
 
   const ScreenSwitchValue(
