@@ -1,5 +1,9 @@
 ## 0.2.0
 
+Minor Documentation Updates
+
+## 0.2.0
+
 Migrating to null safety
 
 ## 0.1.2
