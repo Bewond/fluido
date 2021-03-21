@@ -11,38 +11,36 @@ class LayoutSwitchWidget {
   final FluidoBreakpoints breakpoints;
   final Widget other;
 
-  final Widget sm;
-  final Widget md;
-  final Widget lg;
-  final Widget xl;
-  final Widget xl2;
+  final Widget? sm;
+  final Widget? md;
+  final Widget? lg;
+  final Widget? xl;
+  final Widget? xl2;
 
   const LayoutSwitchWidget(
     this.context, {
-    this.breakpoints,
-    this.other,
+    required this.breakpoints,
+    required this.other,
     this.sm,
     this.md,
     this.lg,
     this.xl,
     this.xl2,
-  }) : assert(context != null);
+  });
 
   /// The [Widget] selected, depending on the size of the parent widget.
   Widget get widget {
-    var settings = breakpoints ?? FluidoSettings.breakpoints;
-
     return LayoutBuilder(
       builder: (context, constraints) {
         var width = constraints.maxWidth;
 
-        if (width < settings.sm) {
+        if (width < breakpoints.sm) {
           return sm ?? other;
-        } else if (width < settings.md) {
+        } else if (width < breakpoints.md) {
           return md ?? sm ?? other;
-        } else if (width < settings.lg) {
+        } else if (width < breakpoints.lg) {
           return lg ?? md ?? sm ?? other;
-        } else if (width < settings.xl) {
+        } else if (width < breakpoints.xl) {
           return xl ?? lg ?? md ?? sm ?? other;
         } else {
           return xl2 ?? xl ?? lg ?? md ?? sm ?? other;

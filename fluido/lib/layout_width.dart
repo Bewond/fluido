@@ -5,12 +5,12 @@ import 'package:fluido/fluido.dart';
 ///
 /// Specify the [breakpoints] parameter to use custom local breakpoints.
 class LayoutWidth extends StatelessWidget {
-  final FluidoBreakpoints breakpoints;
-  final Widget sm;
-  final Widget md;
-  final Widget lg;
-  final Widget xl;
-  final Widget xl2;
+  final FluidoBreakpoints? breakpoints;
+  final Widget? sm;
+  final Widget? md;
+  final Widget? lg;
+  final Widget? xl;
+  final Widget? xl2;
 
   const LayoutWidth({
     this.breakpoints,
@@ -25,7 +25,7 @@ class LayoutWidth extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutSwitchWidget(
       context,
-      breakpoints: breakpoints,
+      breakpoints: breakpoints ?? FluidoSettings.breakpoints,
       other: Container(),
       sm: sm,
       md: md,

@@ -5,7 +5,7 @@ class ScreenOrientation extends StatelessWidget {
   final Widget landscape;
   final Widget portrait;
 
-  const ScreenOrientation({this.landscape, this.portrait});
+  const ScreenOrientation({required this.landscape, required this.portrait});
 
   @override
   Widget build(BuildContext context) {

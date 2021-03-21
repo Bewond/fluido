@@ -12,35 +12,34 @@ class ScreenSwitchValue<Type> {
   final FluidoBreakpoints breakpoints;
   final Type other;
 
-  final Type sm;
-  final Type md;
-  final Type lg;
-  final Type xl;
-  final Type xl2;
+  final Type? sm;
+  final Type? md;
+  final Type? lg;
+  final Type? xl;
+  final Type? xl2;
 
   const ScreenSwitchValue(
     this.context, {
-    this.breakpoints,
-    this.other,
+    required this.breakpoints,
+    required this.other,
     this.sm,
     this.md,
     this.lg,
     this.xl,
     this.xl2,
-  }) : assert(context != null);
+  });
 
   /// The [Type] value selected, depending on the screen or window size.
   Type get value {
-    var settings = breakpoints ?? FluidoSettings.breakpoints;
     var width = MediaQuery.of(context).size.width;
 
-    if (width < settings.sm) {
+    if (width < breakpoints.sm) {
       return sm ?? other;
-    } else if (width < settings.md) {
+    } else if (width < breakpoints.md) {
       return md ?? sm ?? other;
-    } else if (width < settings.lg) {
+    } else if (width < breakpoints.lg) {
       return lg ?? md ?? sm ?? other;
-    } else if (width < settings.xl) {
+    } else if (width < breakpoints.xl) {
       return xl ?? lg ?? md ?? sm ?? other;
     } else {
       return xl2 ?? xl ?? lg ?? md ?? sm ?? other;

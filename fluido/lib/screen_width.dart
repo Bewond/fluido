@@ -6,12 +6,12 @@ import 'package:fluido/fluido.dart';
 /// Thanks to the incremental system of breakpoints can also be used to show a [Widget] only for certain dimensions.
 /// Specify the [breakpoints] parameter to use custom local breakpoints.
 class ScreenWidth extends StatelessWidget {
-  final FluidoBreakpoints breakpoints;
-  final Widget sm;
-  final Widget md;
-  final Widget lg;
-  final Widget xl;
-  final Widget xl2;
+  final FluidoBreakpoints? breakpoints;
+  final Widget? sm;
+  final Widget? md;
+  final Widget? lg;
+  final Widget? xl;
+  final Widget? xl2;
 
   const ScreenWidth({
     this.breakpoints,
@@ -26,7 +26,7 @@ class ScreenWidth extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenSwitchValue<Widget>(
       context,
-      breakpoints: breakpoints,
+      breakpoints: breakpoints ?? FluidoSettings.breakpoints,
       other: Container(),
       sm: sm,
       md: md,
