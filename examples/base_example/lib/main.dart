@@ -75,6 +75,7 @@ class MyHomePage extends StatelessWidget {
                     context,
                     sm: Axis.vertical,
                     lg: Axis.horizontal,
+                    other: Axis.horizontal,
                   ).value,
                   children: [
                     Flexible(
