@@ -9,9 +9,9 @@ import 'package:fluido/fluido.dart';
 /// The [other] value is used in case there is no lower non-null value for a breakpoint.
 class ScreenSwitchValue<Type> {
   final BuildContext context;
-  final FluidoBreakpoints? breakpoints;
-  final Type? other;
+  final Type other;
 
+  final FluidoBreakpoints? breakpoints;
   final Type? sm;
   final Type? md;
   final Type? lg;
@@ -20,8 +20,8 @@ class ScreenSwitchValue<Type> {
 
   const ScreenSwitchValue(
     this.context, {
+    required this.other,
     this.breakpoints,
-    this.other,
     this.sm,
     this.md,
     this.lg,
@@ -30,7 +30,7 @@ class ScreenSwitchValue<Type> {
   });
 
   /// The [Type] value selected, depending on the screen or window size.
-  Type? get value {
+  Type get value {
     var settings = breakpoints ?? FluidoSettings.breakpoints;
     var width = MediaQuery.of(context).size.width;
 

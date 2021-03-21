@@ -60,9 +60,11 @@ packages:
   fluido:
     dependency: "direct main"
     description:
-      name: fluido
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: fluido
+      ref: HEAD
+      resolved-ref: "0f2dba59bb5ad9d1aaeef9dc4e0be0b43c99cff8"
+      url: "git://github.com/bewond/fluido.git"
+    source: git
     version: "0.2.0"
   flutter:
     dependency: "direct main"
