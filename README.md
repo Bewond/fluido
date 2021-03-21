@@ -23,7 +23,7 @@ A simple and lightweight package to efficiently create reactive and responsive u
 Add this to your package's pubspec.yaml file:
 ```yaml
 dependencies:
-  fluido: ^0.1.2
+  fluido: ^0.2.1
 ```
 #### Install
 You can install packages from the command line:
