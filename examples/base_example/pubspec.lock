@@ -62,10 +62,10 @@ packages:
     description:
       path: fluido
       ref: HEAD
-      resolved-ref: "39ecbb4712c3ded3f0b10b718694ded0239f30d6"
+      resolved-ref: eec0668cfca07878709a21a7eaa72ef75785284b
       url: "git://github.com/bewond/fluido.git"
     source: git
-    version: "0.2.0"
+    version: "0.2.1"
   flutter:
     dependency: "direct main"
     description: flutter
