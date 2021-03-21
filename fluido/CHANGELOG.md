@@ -1,6 +1,10 @@
-## 0.0.1
+## 0.1.2
 
-A simple and lightweight package to efficiently create reactive and responsive user interfaces in Flutter.
+Update README.md
+
+## 0.1.1
+
+Documentation improved
 
 ## 0.1.0
 
@@ -10,10 +14,6 @@ Added new widgets:
 - LayoutWidth
 - LayoutOrientation
 
-## 0.1.1
+## 0.0.1
 
-Documentation improved
-
-## 0.1.2
-
-Update README.md
+A simple and lightweight package to efficiently create reactive and responsive user interfaces in Flutter.
