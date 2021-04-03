@@ -5,8 +5,6 @@
 ## Overview
 A simple and lightweight package to efficiently create reactive and responsive user interfaces in [Flutter](https://flutter.dev/).
 
-(Currently in beta)
-
 - [Installing](#installing)
 - [Introduction](#introduction)
   * [Breakpoints and orientation](#breakpoints-and-orientation)
