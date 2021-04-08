@@ -115,9 +115,9 @@ ScreenWidth(xl: Spacer())
 
 In this example the Spacer widget will only be displayed for sizes extra large and up.
 
-### ScreenOrientation and ScreenOrientation
+### ScreenOrientation and LayoutOrientation
 `ScreenOrientation` select the specified widget according to the screen orientation.
-`ScreenOrientation` is the same but based on the orientation of the parent widget.
+`LayoutOrientation` is the same but based on the orientation of the parent widget.
 
 ```dart
 ScreenOrientation(
