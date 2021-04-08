@@ -1,3 +1,9 @@
+## 0.2.2
+
+Added FluidoContext with:
+- layoutSwitchWidget
+- screenSwitchValue
+
 ## 0.2.1
 
 Minor Documentation Updates
