@@ -67,15 +67,16 @@ Container(
 );
 ```
 
+It can also be accessed directly from the BuildContext using `context.screenSwitchValue()` method.
+
 This can be very useful when used with Flutter's [Flex](https://api.flutter.dev/flutter/widgets/Flex-class.html) widget to display items in row or column depending on size:
 
 ```dart
 Flex(
-  direction: ScreenSwitchValue(
-    context,
+  direction: context.screenSwitchValue(
     sm: Axis.vertical,
     lg: Axis.horizontal,
-  ).value,
+  ),
   children: [
     ...
   ],
@@ -114,9 +115,9 @@ ScreenWidth(xl: Spacer())
 
 In this example the Spacer widget will only be displayed for sizes extra large and up.
 
-### ScreenOrientation and ScreenOrientation
+### ScreenOrientation and LayoutOrientation
 `ScreenOrientation` select the specified widget according to the screen orientation.
-`ScreenOrientation` is the same but based on the orientation of the parent widget.
+`LayoutOrientation` is the same but based on the orientation of the parent widget.
 
 ```dart
 ScreenOrientation(
