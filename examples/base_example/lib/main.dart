@@ -71,7 +71,10 @@ class MyHomePage extends StatelessWidget {
               ScreenWidth(xl: Spacer()),
               Expanded(
                 child: Flex(
-                  direction: context.scr
+                  direction: context.screenSwitchValue(
+                    sm: Axis.vertical,
+                    lg: Axis.horizontal,
+                  ),
                   children: [
                     Flexible(
                       child: FractionallySizedBox(
