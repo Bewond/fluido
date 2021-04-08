@@ -49,15 +49,16 @@ Container(
 );
 ```
 
+It can also be accessed directly from the BuildContext using `context.screenSwitchValue()` method.
+
 This can be very useful when used with Flutter's [Flex](https://api.flutter.dev/flutter/widgets/Flex-class.html) widget to display items in row or column depending on size:
 
 ```dart
 Flex(
-  direction: ScreenSwitchValue(
-    context,
+  direction: context.screenSwitchValue(
     sm: Axis.vertical,
     lg: Axis.horizontal,
-  ).value,
+  ),
   children: [
     ...
   ],
