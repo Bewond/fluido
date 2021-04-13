@@ -1,6 +1,6 @@
 name: fluido
 description: A simple and lightweight package to efficiently create reactive and responsive user interfaces in Flutter.
-version: 0.2.2
+version: 0.2.3
 homepage: https://github.com/bewond/fluido
 repository: https://github.com/bewond/fluido
 
