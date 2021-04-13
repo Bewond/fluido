@@ -49,4 +49,26 @@ extension FluidoContext on BuildContext {
       xl2: xl2,
     ).value;
   }
+
+  /// TODO
+  Widget screenWrapWidget({
+    required Widget content,
+    FluidoBreakpoints? breakpoints,
+    Widget Function(Widget content)? sm,
+    Widget Function(Widget content)? md,
+    Widget Function(Widget content)? lg,
+    Widget Function(Widget content)? xl,
+    Widget Function(Widget content)? xl2,
+  }) {
+    return ScreenWrapWidget(
+      this,
+      content: content,
+      breakpoints: breakpoints,
+      sm: sm,
+      md: md,
+      lg: lg,
+      xl: xl,
+      xl2: xl2,
+    ).widget;
+  }
 }
