@@ -38,7 +38,7 @@ class ScreenWidthWrap extends StatelessWidget {
     if (build != null) {
       return build(content);
     } else {
-      return SizedBox(child: content);
+      return content;
     }
   }
 }
