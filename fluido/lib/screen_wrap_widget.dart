@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluido/fluido.dart';
 
 /// TODO
-class ScreenWrapWidget {
-  final BuildContext context;
-
+class ScreenWidthWrap extends StatelessWidget {
   final Widget content;
   final FluidoBreakpoints? breakpoints;
   final Widget Function(Widget content)? sm;
@@ -13,23 +11,22 @@ class ScreenWrapWidget {
   final Widget Function(Widget content)? xl;
   final Widget Function(Widget content)? xl2;
 
-  const ScreenWrapWidget(
-    this.context, {
+  const ScreenWidthWrap({
     required this.content,
+    this.breakpoints,
     this.sm,
     this.md,
     this.lg,
     this.xl,
     this.xl2,
-    this.breakpoints,
   });
 
-  /// TODO
-  Widget get widget {
+  @override
+  Widget build(BuildContext context) {
     return ScreenSwitchValue<Widget>(
       context,
       breakpoints: breakpoints,
-      sm: _builder(sm) ?? Container(),
+      sm: _builder(sm) ?? content,
       md: _builder(md),
       lg: _builder(lg),
       xl: _builder(xl),
