@@ -29,7 +29,7 @@ class ScreenWrapWidget {
     return ScreenSwitchValue<Widget>(
       context,
       breakpoints: breakpoints,
-      sm: _builder(sm),
+      sm: _builder(sm) ?? Container(),
       md: _builder(md),
       lg: _builder(lg),
       xl: _builder(xl),
@@ -37,11 +37,11 @@ class ScreenWrapWidget {
     ).value;
   }
 
-  Widget _builder(Widget Function(Widget)? build) {
+  Widget? _builder(Widget Function(Widget)? build) {
     if (build != null) {
       return build(content);
     } else {
-      return content;
+      return null;
     }
   }
 }
