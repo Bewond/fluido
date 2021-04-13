@@ -21,6 +21,6 @@ export 'package:fluido/screen_width.dart';
 export 'package:fluido/layout_width.dart';
 export 'package:fluido/screen_orientation.dart';
 export 'package:fluido/layout_orientation.dart';
-export 'package:fluido/screen_width_wrap.dart';
+export 'package:fluido/screen_wrap_widget.dart';
 
 export 'package:fluido/fluido_context.dart';
