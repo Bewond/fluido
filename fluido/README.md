@@ -7,7 +7,8 @@ A simple and lightweight package to efficiently create reactive and responsive u
 - [Documentation](#documentation)
   * [ScreenSwitchValue](#screenswitchvalue)
   * [ScreenWidth and LayoutWidth](#screenwidth-and-layoutwidth)
-  * [ScreenOrientation and ScreenOrientation](#screenorientation-and-screenorientation)
+  * [ScreenOrientation and LayoutOrientation](#screenorientation-and-layoutorientation)
+  * [ScreenWidthWrap](#screenwidthwrap)
   * [FluidoSettings](#fluidosettings)
 - [Maintainers](#maintainers)
 
@@ -97,15 +98,37 @@ ScreenWidth(xl: Spacer())
 
 In this example the Spacer widget will only be displayed for sizes extra large and up.
 
-### ScreenOrientation and ScreenOrientation
+### ScreenOrientation and LayoutOrientation
 `ScreenOrientation` select the specified widget according to the screen orientation.
-`ScreenOrientation` is the same but based on the orientation of the parent widget.
+`LayoutOrientation` is the same but based on the orientation of the parent widget.
 
 ```dart
 ScreenOrientation(
   portrait: Container(child: Text('portrait')),
   landscape: Container(child: Text('landscape')),
 );
+```
+
+### ScreenWidthWrap
+`ScreenWidthWrap` select the widget obtained as a result of the specified function according to the screen or window size.
+Functions take as input the `content` widget passed as a parameter.
+
+This can be useful to wrap a widget with another only for certain dimensions.
+In the following example, only if the `Flex` widget children are arranged horizontally is it necessary to have a `Flexible` widget as a parent.
+
+```dart
+Flex(
+  direction: context.screenSwitchValue(
+    sm: Axis.vertical,
+    lg: Axis.horizontal,
+  ),
+  children: [
+    ScreenWidthWrap(
+      lg: (content) => Flexible(child: content),
+      content: ...,
+    ),
+  ],
+),
 ```
 
 ### FluidoSettings
