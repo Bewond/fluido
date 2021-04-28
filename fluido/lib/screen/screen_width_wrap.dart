@@ -29,22 +29,16 @@ class ScreenWidthWrap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenSwitchValue<Widget>(
+    return ScreenSwitchValue<Widget Function(Widget content)>(
       context,
       breakpoints: breakpoints,
-      sm: _builder(sm) ?? content,
-      md: _builder(md),
-      lg: _builder(lg),
-      xl: _builder(xl),
-      xl2: _builder(xl2),
-    ).value;
+      sm: sm ?? _identity,
+      md: md,
+      lg: lg,
+      xl: xl,
+      xl2: xl2,
+    ).value(content);
   }
 
-  Widget? _builder(Widget Function(Widget)? build) {
-    if (build != null) {
-      return build(content);
-    } else {
-      return null;
-    }
-  }
+  Widget _identity(Widget content) => content;
 }
