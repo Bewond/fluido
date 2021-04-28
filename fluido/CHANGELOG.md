@@ -1,20 +1,20 @@
 ## 0.2.3
 
-TODO
+Added the new `ScreenWidthWrap` widget.
 
 ## 0.2.2
 
-Added FluidoContext with:
+Added `FluidoContext` with:
 - layoutSwitchWidget
 - screenSwitchValue
 
 ## 0.2.1
 
-Minor Documentation Updates
+Minor Documentation Updates.
 
 ## 0.2.0
 
-Migrating to null safety
+Migrating to null safety.
 
 ## 0.1.2
 
@@ -22,7 +22,7 @@ Update README.md
 
 ## 0.1.1
 
-Documentation improved
+Documentation improved.
 
 ## 0.1.0
 
