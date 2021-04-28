@@ -126,6 +126,28 @@ ScreenOrientation(
 );
 ```
 
+### ScreenWidthWrap
+`ScreenWidthWrap` select the widget obtained as a result of the specified function according to the screen or window size.
+Functions take as input the `content` widget passed as a parameter.
+
+This can be useful to wrap a widget with another only for certain dimensions.
+In the following example, only if the `Flex` widget children are arranged horizontally is it necessary to have a `Flexible` widget as a parent.
+
+```dart
+Flex(
+  direction: context.screenSwitchValue(
+    sm: Axis.vertical,
+    lg: Axis.horizontal,
+  ),
+  children: [
+    ScreenWidthWrap(
+      lg: (content) => Flexible(child: content),
+      content: ...,
+    ),
+  ],
+),
+```
+
 ### FluidoSettings
 The following breakpoints are currently available:
 - sm = 640
