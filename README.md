@@ -13,6 +13,7 @@ A simple and lightweight package to efficiently create reactive and responsive u
   * [ScreenSwitchValue](#screenswitchvalue)
   * [ScreenWidth and LayoutWidth](#screenwidth-and-layoutwidth)
   * [ScreenOrientation and ScreenOrientation](#screenorientation-and-screenorientation)
+  * [ScreenWidthWrap](#screenwidthwrap)
   * [FluidoSettings](#fluidosettings)
 - [Maintainers](#maintainers)
 
