@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:fluido/fluido.dart';
 
-/// TODO
+/// Select the [Widget] obtained as a result of the specified [Function]
+/// according to the screen or window size.
+/// Functions take as input the [content] widget passed as a parameter.
+///
+/// Thanks to the incremental system of breakpoints it can be useful
+/// to wrap a [Widget] with another only for certain dimensions.
+/// Specify the [breakpoints] parameter to use custom local breakpoints.
 class ScreenWidthWrap extends StatelessWidget {
   final Widget content;
   final FluidoBreakpoints? breakpoints;
