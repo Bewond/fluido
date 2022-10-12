@@ -29,7 +29,7 @@ Add this to your package's pubspec.yaml file:
 
 ```yaml
 dependencies:
-  fluido: ^0.2.3
+  fluido: ^0.2.4
 ```
 
 #### Install

@@ -14,6 +14,7 @@ class ScreenWidth extends StatelessWidget {
   final Widget? xl2;
 
   const ScreenWidth({
+    super.key,
     this.breakpoints,
     this.sm,
     this.md,

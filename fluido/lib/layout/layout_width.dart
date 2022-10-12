@@ -13,6 +13,7 @@ class LayoutWidth extends StatelessWidget {
   final Widget? xl2;
 
   const LayoutWidth({
+    super.key,
     this.breakpoints,
     this.sm,
     this.md,

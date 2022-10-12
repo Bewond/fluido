@@ -2,7 +2,7 @@
 ///
 /// Edit the [breakpoints] parameter to set custom global breakpoints.
 class FluidoSettings {
-  static FluidoBreakpoints breakpoints = FluidoBreakpoints();
+  static FluidoBreakpoints breakpoints = const FluidoBreakpoints();
 }
 
 /// Contains the maximum values, in logical pixels, for the breakpoints.

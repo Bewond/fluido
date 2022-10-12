@@ -1,16 +1,37 @@
 # Fluido
+
 A simple and lightweight package to efficiently create reactive and responsive user interfaces in [Flutter](https://flutter.dev/).
 
+- [Installing](#installing)
 - [Introduction](#introduction)
-  * [Breakpoints and orientation](#breakpoints-and-orientation)
-  * [Screen or Layout](#screen-or-layout)
+  - [Breakpoints and orientation](#breakpoints-and-orientation)
+  - [Screen or Layout](#screen-or-layout)
 - [Documentation](#documentation)
-  * [ScreenSwitchValue](#screenswitchvalue)
-  * [ScreenWidth and LayoutWidth](#screenwidth-and-layoutwidth)
-  * [ScreenOrientation and LayoutOrientation](#screenorientation-and-layoutorientation)
-  * [ScreenWidthWrap](#screenwidthwrap)
-  * [FluidoSettings](#fluidosettings)
+  - [ScreenSwitchValue](#screenswitchvalue)
+  - [ScreenWidth and LayoutWidth](#screenwidth-and-layoutwidth)
+  - [ScreenOrientation and LayoutOrientation](#screenorientation-and-layoutorientation)
+  - [ScreenWidthWrap](#screenwidthwrap)
+  - [FluidoSettings](#fluidosettings)
 - [Maintainers](#maintainers)
+
+## Installing
+
+#### Depend
+
+Add this to your package's pubspec.yaml file:
+
+```yaml
+dependencies:
+  fluido: ^0.2.4
+```
+
+#### Install
+
+You can install packages from the command line:
+
+```shell
+flutter pub get
+```
 
 ## Introduction
 
@@ -25,11 +46,13 @@ while for the dimensions from large upwards the specified `lg` value is selected
 This allows you to **incrementally specify** which value you want to get.
 
 ### Breakpoints and orientation
+
 Breakpoints are used to select a value depending on the width of the screen or window, for example with the `ScreenWidth` and `LayoutWidth` widgets.
 
 To select a value based on orientation, landscape or portrait, use the `ScreenOrientation` and `LayoutOrientation` widgets.
 
 ### Screen or Layout
+
 There are two versions of the main widgets and classes:
 
 Objects named with `Screen*` refer to the size of the screen or window while those with `Layout*` refer to the size of the parent widget and can therefore only be used as a widget.
@@ -37,6 +60,7 @@ Objects named with `Screen*` refer to the size of the screen or window while tho
 ## Documentation
 
 ### ScreenSwitchValue
+
 `ScreenSwitchValue` selects the specified value according to the screen or window size,
 it updates automatically as dimensions change and can be used for values of any type.
 
@@ -67,6 +91,7 @@ Flex(
 ```
 
 ### ScreenWidth and LayoutWidth
+
 `ScreenWidth` select the specified widget according to the screen or window size (like `ScreenSwitchValue` of type widget).
 `LayoutWidth` is the same but based on the size of the parent widget.
 
@@ -99,6 +124,7 @@ ScreenWidth(xl: Spacer())
 In this example the Spacer widget will only be displayed for sizes extra large and up.
 
 ### ScreenOrientation and LayoutOrientation
+
 `ScreenOrientation` select the specified widget according to the screen orientation.
 `LayoutOrientation` is the same but based on the orientation of the parent widget.
 
@@ -110,6 +136,7 @@ ScreenOrientation(
 ```
 
 ### ScreenWidthWrap
+
 `ScreenWidthWrap` select the widget obtained as a result of the specified function according to the screen or window size.
 Functions take as input the `content` widget passed as a parameter.
 
@@ -132,7 +159,9 @@ Flex(
 ```
 
 ### FluidoSettings
+
 The following breakpoints are currently available:
+
 - sm = 640
 - md = 768
 - lg = 1024
@@ -155,6 +184,7 @@ void main() {
 ```
 
 To specify different breakpoint values for a specific widget use the optional `breakpoints` parameter:
+
 ```dart
 ScreenWidth(
   breakpoints: FluidoBreakpoints(
@@ -168,4 +198,5 @@ ScreenWidth(
 ```
 
 ## Maintainers
+
 - [Riccardo Brero](https://github.com/Riki1312)

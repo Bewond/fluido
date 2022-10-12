@@ -18,6 +18,7 @@ class ScreenWidthWrap extends StatelessWidget {
   final Widget Function(Widget content)? xl2;
 
   const ScreenWidthWrap({
+    super.key,
     required this.content,
     this.breakpoints,
     this.sm,

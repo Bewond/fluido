@@ -1,3 +1,8 @@
+## 0.2.4
+
+- Updated dependencies.
+- Added example directory.
+
 ## 0.2.3
 
 Added the new `ScreenWidthWrap` widget.
